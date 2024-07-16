@@ -1,0 +1,123 @@
+<form  [formGroup]="productEditForm" (ngSubmit)="save()">
+ 
+
+  <!-----------------First line----------->
+  <div style="display: flex; width: 100%;">
+    
+    <div style="margin: 10px; width: 33%;">
+      <div style="width: 50%;margin: auto;">
+        <label for="name">Name</label>
+        <input type="text" name="name" formControlName="name" placeholder="Name of the product" class="box" >
+        <span style="color:red" *ngIf="this.productEditForm.get('name')?.errors?.['required']">
+          (Empty value) </span>
+      </div>
+    </div>
+    <div style="margin: 10px; width: 33%;">
+        <div style="width: 50%;margin: auto;">
+            <label for="type">Type</label>
+            <select  name="type" formControlName="type" class="box" >
+            <option [ngValue]="'Valor1'">Value 1</option>
+            <option [ngValue]="'Valor2'">Value 2</option>
+            <option [ngValue]="'Valor2'">Value 3</option>
+            </select>
+            <span style="color:red" *ngIf="this.productEditForm.get('type')?.errors?.['required']">
+              (Empty value) </span>
+        </div>
+    </div>
+    <div style="margin: 10px; width: 33%;">
+        <div style="width: 50%;margin: auto;">
+          <label for="desc">Description</label>
+          <textarea name="desc" cols="26" rows="3" formControlName="descrip"></textarea>
+          <span style="color:red" *ngIf="this.productEditForm.get('descrip')?.errors?.['required']">
+            (Empty value) </span>
+        </div>
+    </div>              
+
+  </div>
+  <!------------------------------------------>
+
+  <!-----------------Second line-------------->
+  <div style="display: flex; width: 100%;">
+    
+    <div style="margin: 10px; width: 33%;">
+      <div style="width: 50%;margin: auto;">
+        <label for="date">Entry Date</label>
+        <input type="date" name="date" formControlName="date" class="box" >
+        <span style="color:red" *ngIf="this.productEditForm.get('date')?.errors?.['required']">
+          (Empty value) </span>
+      </div>
+    </div>
+    <div style="margin: 10px; width: 33%;">
+        <div style="width: 50%;margin: auto;">
+          <label for="cost">Cost</label>
+          <input type="number" name="cost" formControlName="cost" class="box" >
+          <span style="color:red" *ngIf="this.productEditForm.get('cost')?.errors?.['required']">
+            (Empty value) </span>          
+        </div>
+    </div>
+    <div style="margin: 10px; width: 33%;">
+        <div style="width: 50%;margin: auto;">
+          <label for="units">Units</label>
+          <input type="number" name="units" formControlName="units" class="box" >  
+          <span style="color:red" *ngIf="this.productEditForm.get('units')?.errors?.['required']">
+            (Empty value) </span>           
+        </div>
+    </div>                  
+
+  </div>
+
+  <!------------------------------------------>
+
+  <!-----------------Third line-------------->
+
+  <div style="display: flex; width: 100%;">
+    
+    <div style="margin: 10px; width: 33%;">
+      <div style="width: 50%;margin: auto;">
+        <label for="store">Store Number</label>
+        <input type="number" name="store" formControlName="storeNumber" class="box" >
+        <span style="color:red" *ngIf="this.productEditForm.get('storeNumber')?.errors?.['required']">
+          (Empty value) </span>
+      </div>
+    </div>
+    <div style="margin: 10px; width: 33%;">
+        <div style="width: 50%;margin: auto;">
+          <label for="disp">Dispatcher</label>
+          <input type="text" name="disp" formControlName="dispatcher" class="box" >      
+          <span style="color:red" *ngIf="this.productEditForm.get('dispatcher')?.errors?.['required']">
+            (Empty value) </span>    
+        </div>
+    </div>
+    <div style="margin: 10px; width: 33%;">
+        <div style="width: 50%;margin: auto;">
+                      
+        </div>
+    </div>                   
+
+  </div>
+  <!------------------------------------------>
+
+  <!------------------Buttons---------------->
+  <div style="display: flex; width: 100%;">
+
+    <div style="margin: 10px; width: 70%;">        
+    </div>
+
+    <div style="margin: 10px; width: 10%;">
+        <div style="width: 50%;margin: auto;">
+            <button class="button-save"  type="submit" >Save</button>  
+        </div>
+    </div>   
+    <div style="margin: 10px; width: 10%;">
+        <div style="width: 50%;margin: auto;">
+            <button class="button-cancel" type="button" (click)="cancel()">Cancel</button>    
+        </div>
+    </div> 
+    
+    <div style="margin: 10px; width: 6%;">        
+    </div>  
+    
+  </div>
+
+</form>
+<div>{{result}}</div>

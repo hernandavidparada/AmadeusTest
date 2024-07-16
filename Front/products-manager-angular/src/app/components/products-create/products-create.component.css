@@ -1,0 +1,22 @@
+.button-save{
+    background-color: #56af31 !important;
+    width: 90px;
+    height: 40px;
+    color: white !important;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+
+
+.button-cancel{
+    background-color: #bf0411 !important;
+    width: 90px;
+    height: 40px;
+    color: white !important;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+
+.box{
+    width: 30vh ;height: 4vh;
+}
