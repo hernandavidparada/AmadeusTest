@@ -4,8 +4,10 @@ This is a test project for the manage of diferent products for diferent stores. 
 
 ## Technologies
 
-Angular 15.2
-.NET Core 6.0
+Angular 15.2,   
+
+.NET Core 6.0,  
+
 Sql server 15.0
 
 ## Get started
